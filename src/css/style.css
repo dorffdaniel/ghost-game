@@ -126,7 +126,7 @@ body{
 }
 
 .bx{
-    font-size: 5em;
+    font-size: 3.5em;
 }
 
 .linha1{
@@ -137,34 +137,40 @@ body{
 }
 
 .linha1:nth-child(1){
-    animation: mover linear infinite 3s;
+    animation: mover linear infinite 5s;
 }
 
 @keyframes mover {
     0%{
         transform: translateY(0px);
     }
+    50%{
+        transform: translateY(300px);
+    }
     100%{
-        transform: translateY(500px);
+        transform: translateY(0px);
     }
 } 
 
 .font .linha2{
     display: flex;
     justify-content: space-around;
+    margin-top: 4em;
 } 
 
 .font .linha2:nth-child(2){
-    animation: moverlado linear infinite 4s;
+    animation: moverlado linear infinite 5s;
 }
 
 @keyframes moverlado{
     0%{
         transform: translateX(0px);
     }
+    50%{
+        transform: translateX(300px);
+    }
     100%{
-        transform: translateX(400px);
-        opacity: 0.1;
+        transform: translateX(0px);
     }
 }
 
@@ -204,7 +210,7 @@ body{
 
 .linha7{
     margin-left: 5em;
-    margin-bottom: 20em;
+    margin-bottom: 11em;
 }
 
 .linha8{
@@ -222,7 +228,7 @@ body{
     pointer-events: none;
     z-index: 1;
     transition: background 0.1s ease-out;
-}
+} 
 
 .sumirGhosts{
     display: none;

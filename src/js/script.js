@@ -54,7 +54,16 @@ btnNao.addEventListener('click', ()=>{
 let respostaJogador = document.getElementById('resposta');
 let resultadoResposta = document.querySelector('.resultadoResposta');
 let btnEnviarResposta = document.querySelector('.btnEnviarResposta');
-btnEnviarResposta.addEventListener('click', ()=>{
+
+btnEnviarResposta.addEventListener('click', verificarResposta);
+
+respostaJogador.addEventListener('keydown', (event)=>{
+    if(event.key==='Enter'){
+        verificarResposta()
+    }
+})
+
+function verificarResposta(){
     let respotaJogadorEnviada = respostaJogador.value;
     if(respotaJogadorEnviada ==='17'){
         resultadoResposta.innerHTML='Parabens jogador'
@@ -68,10 +77,9 @@ btnEnviarResposta.addEventListener('click', ()=>{
             resultadoResposta.innerHTML = "";
         }, 3000);
     }
-});
+}
 
-
-let palavra= 'começar o jogo? ';
+let palavra= 'começar o jogo ?  ';
 let index= 0;
 
 function efeitoPalavra(){
