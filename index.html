@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost game</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="card">
+        <h1 class="informacao"></h1>
+        <p class="missao">sua missao é contar quantos fantasmas tem na manssao winchester</p>
+        <button class="btnSim">sim</button>
+        <button class="btnNao">nao</button>
+    </div>
+    <div class="card-resposta">
+        <div class="conteudoEntradaResposta">
+            <label for="resposta">Sua resposta</label>
+            <input type="number" name="" min="0" id="resposta">
+            <button class="btnEnviarResposta">Enviar</button>
+        </div>
+        <div class="conteudoExtra">
+            <p>tempo: <span class="contador"></span></p>
+            <p class="resultadoResposta"></p>
+        </div>
+    </div>  
+    <div class="font">
+        <div class="linha1">
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+        </div>
+        <div class="linha2">
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+        </div>
+        <div class="linha3">
+            <i class='bx bx-ghost'></i>
+        </div>
+        <div class="linha4">
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+        </div>
+        <div class="linha5">
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+        </div>
+        <div class="linha6">
+            <i class='bx bx-ghost'></i>
+        </div>
+        <div class="linha7">
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+        </div>
+        <div class="linha8">
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+            <i class='bx bx-ghost'></i>
+        </div>
+
+    </div>
+    <div class="hover"></div>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
