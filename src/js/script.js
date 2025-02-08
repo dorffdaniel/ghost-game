@@ -79,16 +79,4 @@ function verificarResposta(){
     }
 }
 
-let palavra= 'começar o jogo ?  ';
-let index= 0;
-
-function efeitoPalavra(){
-    informacao.innerHTML = palavra.substring(0, index)
-    index++;
-    if(index > palavra.length){
-        index= 0;
-    }
-}
-
-setInterval(efeitoPalavra, 500);
 
