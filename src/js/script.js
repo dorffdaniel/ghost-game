@@ -30,14 +30,27 @@ function tempo(){
     }
 }
 
+let cardJogador = document.querySelector('.cardJogador');
+let botaoEnviarNomePlayer = document.querySelector('.enviarNome');
+
+let nomePlayer = document.querySelector('.inputNomePlayer');
+botaoEnviarNomePlayer.addEventListener('click', ()=>{
+    if(nomePlayer.value.trim() !== ''){
+        fontGhosts.classList.add('mostrar')
+        cardJogador.classList.remove('aparecer');
+        cardResposta.style.display='block';
+    }if(!intervalo){
+        intervalo = setInterval(tempo, 1000);
+    }else{
+        alert('por favor preencha o campo');
+    }
+});
+
+
 let btnSim = document.querySelector('.btnSim');
 btnSim.addEventListener('click', ()=>{
-    fontGhosts.classList.add('mostrar');
     cardPergunta.style.display= 'none';
-    cardResposta.style.display='block';
-    if(!intervalo){
-        intervalo = setInterval(tempo, 1000);
-    }
+    cardJogador.classList.add('aparecer');
 });
 
 
@@ -65,8 +78,11 @@ respostaJogador.addEventListener('keydown', (event)=>{
 
 function verificarResposta(){
     let respotaJogadorEnviada = respostaJogador.value;
+    let resultado = document.querySelector('.resultado');
+    let mensagemVencedor = document.querySelector('.mensagemVencedor');
     if(respotaJogadorEnviada ==='17'){
-        resultadoResposta.innerHTML='Parabens jogador'
+        resultado.style.display='block'
+        mensagemVencedor.innerHTML= `parabens ${nomePlayer.value}`;
         clearInterval(intervalo);
         btnEnviarResposta.classList.add('sumirGhosts')
     }else{
