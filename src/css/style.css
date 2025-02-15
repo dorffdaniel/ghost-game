@@ -81,14 +81,25 @@ body{
     margin-right: 1em;
 }
 
-.cardJogador button{
+.cardJogador .enviarNome{
     padding: 0.2em;
     cursor: pointer;
     background: rgb(5, 97, 13);
     color: #f1f1f1;
     border-radius: 0.5em;
+    margin: 0 1em;
     border: none;
 }
+
+.btnVoltarInicio{
+    padding: 0.2em;
+    cursor: pointer;
+    background: rgb(219, 89, 1);
+    color: #f1f1f1;
+    border-radius: 0.5em;
+    border: none;
+}
+
 
 .card-resposta{
     position: fixed;

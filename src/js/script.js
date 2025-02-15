@@ -53,6 +53,11 @@ btnSim.addEventListener('click', ()=>{
     cardJogador.classList.add('aparecer');
 });
 
+let btnVoltarInicio = document.querySelector('.btnVoltarInicio');
+btnVoltarInicio.addEventListener('click',()=>{
+    cardPergunta.style.display= 'block';
+    cardJogador.classList.remove('aparecer');
+});
 
 let informacao = document.querySelector('.informacao');
 let missao = document.querySelector('.missao');
@@ -74,7 +79,7 @@ respostaJogador.addEventListener('keydown', (event)=>{
     if(event.key==='Enter'){
         verificarResposta()
     }
-})
+});
 
 function verificarResposta(){
     let respotaJogadorEnviada = respostaJogador.value;
